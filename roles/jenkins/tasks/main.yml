@@ -1,20 +1,5 @@
-- name: create config file
-  ansible.builtin.template:
-    src: job.xml
-    dest: /tmp/job.xml
-
-- name: create a jenkins job
-  community.general.jenkins_job:
-    config: "{{ lookup('file', '/tmp/job.xml') }}"
-    name: test
-    url: http://172.31.1.72:8080
-    user: admin
-    password: "{{jenkins_password}}"
+- name: apply tags to tasks within included files
+  ansible.builtin.include_tasks:
+    file: install.yml
   loop:
     - frontend
-    - cart
-    - catalogue
-    - user
-    - shipping
-    - dispatch
-    - payment
