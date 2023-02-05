@@ -10,6 +10,7 @@
     url: http://172.31.1.72:8080
     user: admin
     password: "{{jenkins_password}}"
+  loop: "{{folders}}"
 
 - name: Create Config file
   ansible.builtin.template:
