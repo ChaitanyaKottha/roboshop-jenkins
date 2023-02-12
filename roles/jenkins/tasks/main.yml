@@ -2,6 +2,6 @@
   ansible.builtin.include_tasks: pipeline.yml
   loop: "{{pipeline_jobs}}"
 
-- name: create single branch pipeline jobs
-  ansible.builtin.include_tasks: sbranch-pipeline.yml
-  loop: "{{sbranch_pipeline_jobs}}"
+#- name: create single branch pipeline jobs
+#  ansible.builtin.include_tasks: sbranch-pipeline.yml
+#  loop: "{{sbranch_pipeline_jobs}}"
