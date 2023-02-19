@@ -11,5 +11,4 @@ folders:
   - Infra
 
 sbranch_pipeline_jobs:
-  - {name: "roboshhop-infra", dir: "Infra"}
-  
+  - {name: "roboshop-infra", dir: "Infra"}
